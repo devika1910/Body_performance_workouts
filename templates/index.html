@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<div id="contact-form">
+  <div>
+    <h1>BODY PERFORMANCE BY WORKOUT</h1>
+    <h4><marquee speed="80">WORKOUT PERFORMANCE</marquee></h4>
+  </div>
+
+
+       <form action='./predict' method="post">
+      <div>
+          <label for="age">
+            <span class="required">AGE: *</span>
+            <input type="number" id="age" name="age" value="" placeholder="Your age.." required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+      <div class="gender">
+          <label for="gender">
+            <span class="required">Gender: *</span></label>
+             <br>
+            <select name="gender" value="gender" id="gender">
+                <!--<option value="" disabled selected hidden>Select</option>-->
+                <option value="M" >Male</option>
+                <option value="F">Female</option>
+            </select>
+
+      </div>
+      <div>
+          <label for="height_cm">
+            <span class="required">Height(cm): *</span>
+            <input type="number" name="height_cm" placeholder="Enter your height(cm)" min="140" max="200" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+     <div>
+          <label for="weight_kg">
+            <span class="required">Weight(kg): *</span>
+            <input type="number" name="weight_kg" placeholder="Enter your Weight(kg)" min="30" max="150" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+       <div>
+          <label for="body fat_%">
+            <span class="required">Body fat%: *</span>
+            <input type="number" name="body fat_%" placeholder="Your body fat %" min="0" max="50" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+      <div>
+          <label for="diastolic">
+            <span class="required">Diastolic: *</span>
+            <input type="number" name="diastolic" placeholder="Your diastolic" min="40" max="100" step="1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+     <div>
+          <label for="systolic">
+            <span class="required">Systolic: *</span>
+            <input type="number" name="systolic" placeholder="Your systolic" min="80" max="" step="1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+      <div>
+          <label for="gripForce">
+            <span class="required">gripForce: *</span>
+            <input type="number" name="gripForce" placeholder="Enter gripForce" min="0" max="100" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+     <div>
+          <label for="sit and bend forward_cm">
+            <span class="required">sit and bend forward_cm: *</span>
+            <input type="number" name="sit and bend forward_cm" placeholder="Enter sit and bend forward_cm" min="-50" max="50" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+      <div>
+          <label for="sit-ups counts">
+            <span class="required">Sit-ups counts: *</span>
+            <input type="number" name="sit-ups counts" placeholder="Enter sit-ups counts" min="0" max="150" step="1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+      <div>
+          <label for="broad jump_cm">
+            <span class="required">Broad jump_cm: *</span>
+            <input type="number" name="Broad jump_cm" placeholder="Enter broad jump_cm" min="30" max="400" step="0.1" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+      </div>
+
+       <div>
+          <button name="submit" type="submit" id="submit" >SUBMIT</button>
+      </div>
+
+
+      <div>
+          <button name="reset" type="reset" id="reset" >RESET</button>
+      </div>
+        <div>
+       <h3>Grade : {{pred}}</h3>
+       </div>
+       </form>
+
+  </div>
+
+</html>
